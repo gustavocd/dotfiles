@@ -1,0 +1,131 @@
+{
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.fontSize": 17,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.lineHeight": 30,
+  "editor.cursorBlinking": "expand",
+  "editor.fontFamily": "'Fira code', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "400",
+  "editor.lineNumbers": "off",
+  "terminal.integrated.fontFamily": "'Fira Code'",
+  "terminal.integrated.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.renderIndentGuides": false,
+  "editor.wordWrapColumn": 120,
+  "workbench.tree.renderIndentGuides": "none",
+  "bracketPairColorizer.forceIterationColorCycle": true,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "vscode_custom_css.imports": [
+    "file:///Users/gustavo/synthwave84.css"
+  ],
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "npm",
+  "prettier.requireConfig": true,
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": {
+    "*.gohtml": "html",
+    "*.heml": "html"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "plaintext": "jade"
+  },
+  "explorer.confirmDelete": false,
+  "editor.snippetSuggestions": "top",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "workbench.colorTheme": "Gruvbox Dark (Hard)",
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "vscode-icons",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.formatTool": "goimports",
+  "liveServer.settings.donotShowInfoMsg": true,
+  /**/
+  // Night Owl settings
+  /*
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#000C1D",
+    "activityBar.border": "#102a44",
+    "sideBar.background": "#001122",
+    "sideBar.border": "#102a44",
+    "sideBar.foreground": "#8BADC1"
+  },
+  "importCost.largePackageColor": "#EC3A37F5",
+  "importCost.mediumPackageColor": "#B362FF",
+  "importCost.smallPackageColor": "#B362FF",
+  "explorer.confirmDragAndDrop": false,
+  "go.useLanguageServer": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  /**/
+  /**/
+  // Ocean Next settings
+  /*
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#000C1D",
+    "activityBar.border": "#102a44",
+    "sideBar.background": "#1b2b34ff",
+    "sideBar.border": "#102a44"
+  },
+  "importCost.largePackageColor": "#EC3A37F5",
+  "importCost.mediumPackageColor": "#B362FF",
+  "importCost.smallPackageColor": "#B362FF",
+  "explorer.confirmDragAndDrop": false,
+  /**/
+  /**/
+  // Shades of purple settings
+  /*
+  "workbench.colorTheme": "Oceanic Next",
+  "editor.letterSpacing": 0.5,
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 3,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.glyphMargin": true,
+  "workbench.editor.enablePreview": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "prettier.eslintIntegration": true,
+  "workbench.fontAliasing": "auto",
+  "terminal.integrated.macOptionIsMeta": true,
+  "workbench.statusBar.feedback.visible": false,
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "full": {
+        "custom": {
+          "backgroundColor": "rgba(165, 153, 233, 0.1)"
+        }
+      },
+      "left": {
+        "custom": {
+          "borderWidth": "0"
+        }
+      },
+      "right": {
+        "custom": {
+          "borderWidth": "0"
+        }
+      }
+    }
+  },
+  "importCost.largePackageColor": "#EC3A37F5",
+  "importCost.mediumPackageColor": "#B362FF",
+  "importCost.smallPackageColor": "#B362FF"
+  /**/
+}
