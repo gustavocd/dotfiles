@@ -1,9 +1,9 @@
 [user]
-	name = Gustavo Castillo
+  name = Gustavo Castillo
   email = gcdcoder@gmail.com
 [core]
   editor = vim
 [color]
   ui = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
