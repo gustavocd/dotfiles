@@ -113,6 +113,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias goh="cd ~/go/src/github.com/gustavocd"
+alias vim="nvim"
+alias nvimconf="cd ~/.config/nvim"
 alias sourcebp="source ~/.zshrc"
 
 export PYTHON3=/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
