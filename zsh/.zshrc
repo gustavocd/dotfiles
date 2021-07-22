@@ -115,8 +115,9 @@ source $ZSH/oh-my-zsh.sh
 alias goh="cd ~/go/src/github.com/gustavocd"
 alias sourcebp="source ~/.zshrc"
 
+export PYTHON3=/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
 export GOBIN=$HOME/go/bin
-export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOBIN:$PYTHON3
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
