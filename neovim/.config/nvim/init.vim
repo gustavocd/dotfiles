@@ -21,3 +21,7 @@ lua require'lsp/tsserver'
 lua require'lsp/jsonls'
 lua require'lsp/graphql'
 lua require'lsp/cssls'
+
+" Load gopls configuration
+autocmd BufWritePre *.go lua goimports(1000)
+
