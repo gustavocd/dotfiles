@@ -17,7 +17,8 @@ export ZSH="/Users/gustavo/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="dracula-pro"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -147,3 +148,5 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status go_version background_jobs time)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+
+eval "$(starship init zsh)"
