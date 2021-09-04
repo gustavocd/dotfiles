@@ -37,7 +37,7 @@ set rnu
 set textwidth=80
 set colorcolumn=80
 "set autochdir                           " Your working directory will always be the same as your working directory
-set list lcs=tab:\|\
+set list lcs=tab:\|\ 
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
