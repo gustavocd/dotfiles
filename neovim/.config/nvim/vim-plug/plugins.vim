@@ -30,5 +30,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/nvim-compe'
     Plug 'mhinz/vim-startify'
     Plug 'morhetz/gruvbox'
+    Plug 'Yggdroot/indentLine'
 
 call plug#end()
