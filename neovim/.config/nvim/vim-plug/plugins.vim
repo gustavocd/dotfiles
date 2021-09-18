@@ -31,5 +31,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
     Plug 'morhetz/gruvbox'
     Plug 'Yggdroot/indentLine'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'folke/todo-comments.nvim'
 
 call plug#end()
