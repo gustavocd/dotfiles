@@ -33,5 +33,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'Yggdroot/indentLine'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'folke/todo-comments.nvim'
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 call plug#end()
