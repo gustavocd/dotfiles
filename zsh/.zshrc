@@ -119,9 +119,10 @@ alias nvimconf="cd ~/.config/nvim"
 alias sourcebp="source ~/.zshrc"
 
 export GOPATH=$HOME/go
-export PYTHON3=/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
+#export PYTHON3=/Library/Frameworks/Python.framework/Versions/3.9/bin
+export DEPOT_TOOLS=/Users/gustavo/depot_tools
 export GOBIN=$HOME/go/bin
-export PATH=$PATH:$GOBIN:$PYTHON3:$GOPATH
+export PATH=$PATH:$GOBIN:$GOPATH:$DEPOT_TOOLS
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

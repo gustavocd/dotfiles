@@ -27,3 +27,7 @@ stow --adopt -nvt ~/.config .config
 ```
 
 **Note**: watch this awesome [tutorial](https://www.youtube.com/watch?v=CFzEuBGPPPg) to learn more.
+
+## How to install depot_tools
+
+[depot_tools](https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html)
