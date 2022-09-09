@@ -52,5 +52,6 @@ tags
 # Persistent undo
 [._]*.un~
 
-# Plug vim
+# Plug vim and Packer
 neovim/.config/nvim/autoload
+neovim/.config/nvim/plugin
