@@ -2,12 +2,6 @@
 
 My personal dot env files managed with `stow`.
 
-## How to install stow
-
-```bash
-brew install stow
-```
-
 ## How to add a new configuration file
 
 In order to add a new config file you have to create a new folder inside this repository, and
