@@ -3,7 +3,13 @@ if not status_ok then
 	return
 end
 
-require "gustavocd.lsp.lsp-installer"
+local mason = require("mason")
+local lspZero = require("lsp-zero")
+
+lspZero.preset("recommended")
+lspZero.setup()
+
+mason.setup()
+
 require "gustavocd.lsp.handlers".setup()
 require "gustavocd.lsp.null-ls"
-

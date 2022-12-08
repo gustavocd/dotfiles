@@ -53,5 +53,5 @@ tags
 [._]*.un~
 
 # Plug vim and Packer
-neovim/.config/nvim/autoload
-neovim/.config/nvim/plugin
+nvim/.config/nvim/autoload
+nvim/.config/nvim/plugin

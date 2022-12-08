@@ -79,8 +79,17 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+    }
+  }
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -95,7 +104,7 @@ return packer.startup(function(use)
   -- use "nvim-treesitter/playground"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
-   -- Git
+  -- Git
   use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
