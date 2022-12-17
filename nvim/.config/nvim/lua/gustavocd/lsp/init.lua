@@ -4,12 +4,13 @@ if not status_ok then
 end
 
 local mason = require("mason")
-local lspZero = require("lsp-zero")
+local lsp_zero = require("lsp-zero")
 
-lspZero.preset("recommended")
-lspZero.setup()
+lsp_zero.preset("recommended")
+lsp_zero.setup()
 
 mason.setup()
 
-require "gustavocd.lsp.handlers".setup()
-require "gustavocd.lsp.null-ls"
+require("gustavocd.lsp.settings")
+require("gustavocd.lsp.handlers").setup()
+require("gustavocd.lsp.null-ls")

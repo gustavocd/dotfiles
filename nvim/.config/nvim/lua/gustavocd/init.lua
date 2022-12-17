@@ -1,19 +1,19 @@
-require "gustavocd.options"
-require "gustavocd.keymaps"
-require "gustavocd.plugins"
-require "gustavocd.colorscheme"
-require "gustavocd.cmp"
-require "gustavocd.lsp"
-require "gustavocd.telescope"
-require "gustavocd.treesitter"
-require "gustavocd.autopairs"
-require "gustavocd.comment"
-require "gustavocd.gitsigns"
-require "gustavocd.nvim-tree"
-require "gustavocd.bufferline"
-require "gustavocd.indentline"
-require "gustavocd.lualine"
-require "gustavocd.impatient"
-require "gustavocd.project"
-require "gustavocd.alpha"
-require "gustavocd.whichkey"
+require("gustavocd.options")
+require("gustavocd.keymaps")
+require("gustavocd.plugins")
+require("gustavocd.colorscheme")
+require("gustavocd.cmp")
+require("gustavocd.lsp")
+require("gustavocd.telescope")
+require("gustavocd.treesitter")
+require("gustavocd.autopairs")
+require("gustavocd.comment")
+require("gustavocd.gitsigns")
+require("gustavocd.nvim-tree")
+require("gustavocd.bufferline")
+require("gustavocd.indentline")
+require("gustavocd.lualine")
+require("gustavocd.impatient")
+require("gustavocd.project")
+require("gustavocd.alpha")
+require("gustavocd.whichkey")
