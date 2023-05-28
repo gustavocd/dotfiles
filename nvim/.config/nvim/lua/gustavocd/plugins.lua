@@ -57,12 +57,28 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
+	use({
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	})
 
 	-- Colorschemes
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	-- use({ "catppuccin/nvim", as = "catppuccin" })
 	--[[ use 'folke/tokyonight.nvim' ]]
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	--[[ use "lunarvim/darkplus.nvim" ]]
+	use({
+		"sainnhe/gruvbox-material",
+		enabled = true,
+		priority = 1000,
+		config = function()
+			vim.o.background = "dark"
+			vim.g.gruvbox_material_background = "hard"
+			vim.g.gruvbox_material_transparent_background = 1
+			vim.cmd.colorscheme("gruvbox-material")
+		end,
+	})
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -85,9 +101,9 @@ return packer.startup(function(use)
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
 			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
+			{ "neovim/nvim-lspconfig" },
 		},
 	})
 
@@ -110,6 +126,54 @@ return packer.startup(function(use)
 	use("NvChad/nvim-colorizer.lua")
 
 	use("roobert/tailwindcss-colorizer-cmp.nvim")
+
+	-- copilot
+	use({
+		"zbirenbaum/copilot.lua",
+		enabled = true,
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				panel = {
+					enabled = true,
+					auto_refresh = true,
+					keymap = {
+						jump_next = "<c-j>",
+						jump_prev = "<c-k>",
+						accept = "<c-a>",
+						refresh = "r",
+						open = "<M-CR>",
+					},
+					layout = {
+						position = "bottom", -- | top | left | right
+						ratio = 0.4,
+					},
+				},
+				suggestion = {
+					enabled = true,
+					auto_trigger = true,
+					debounce = 75,
+					keymap = {
+						accept = "<c-a>",
+						accept_word = false,
+						accept_line = false,
+						next = "<c-j>",
+						prev = "<c-k>",
+						dismiss = "<C-e>",
+					},
+				},
+			})
+		end,
+	})
+
+	use({
+		"zbirenbaum/copilot-cmp",
+		after = {},
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

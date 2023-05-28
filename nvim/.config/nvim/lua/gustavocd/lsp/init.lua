@@ -6,10 +6,9 @@ end
 local mason = require("mason")
 local lsp_zero = require("lsp-zero")
 
+mason.setup()
 lsp_zero.preset("recommended")
 lsp_zero.setup()
-
-mason.setup()
 
 require("gustavocd.lsp.settings")
 require("gustavocd.lsp.handlers").setup()
