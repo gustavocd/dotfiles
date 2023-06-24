@@ -176,8 +176,9 @@ return packer.startup(function(use)
 	})
 
 	-- Go
-	use("ray-x/go.nvim")
-	use("ray-x/guihua.lua")
+	-- use("ray-x/go.nvim")
+	-- use("ray-x/guihua.lua")
+	use("fatih/vim-go")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
