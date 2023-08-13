@@ -74,6 +74,7 @@ return packer.startup(function(use)
 		priority = 1000,
 		config = function()
 			vim.o.background = "dark"
+			vim.g.float_style = "dim"
 			vim.g.gruvbox_material_background = "hard"
 			vim.g.gruvbox_material_transparent_background = 1
 			vim.cmd.colorscheme("gruvbox-material")
