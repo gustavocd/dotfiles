@@ -70,12 +70,24 @@ return packer.startup(function(use)
 	--[[ use 'folke/tokyonight.nvim' ]]
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	--[[ use "lunarvim/darkplus.nvim" ]]
-
 	use({
-		"oxfist/night-owl.nvim",
-		lazy = false,
+		"sainnhe/gruvbox-material",
+		enabled = true,
+		lazy = true,
 		priority = 1000,
+		config = function()
+			vim.o.background = "dark"
+			vim.g.float_style = "dim"
+			vim.g.gruvbox_material_background = "hard"
+			vim.g.gruvbox_material_transparent_background = 1
+			vim.cmd.colorscheme("gruvbox-material")
+		end,
 	})
+	-- use({
+	-- "oxfist/night-owl.nvim",
+	-- lazy = false,
+	-- priority = 1000,
+	-- })
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -98,7 +110,15 @@ return packer.startup(function(use)
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
 			-- LSP Support
-			{ "williamboman/mason.nvim" },
+			{
+				"williamboman/mason.nvim",
+				opts = {
+					ensure_installed = {
+						"pyright",
+						"black",
+					},
+				},
+			},
 			{ "williamboman/mason-lspconfig.nvim" },
 			{ "neovim/nvim-lspconfig" },
 		},

@@ -19,7 +19,7 @@ null_ls.setup({
 			-- return utils.has_file({ ".prettierrc.js", ".prettierrc.json" })
 			-- end,
 		}),
-		--[[ formatting.black.with { extra_args = { "--fast" } }, ]]
+		formatting.black.with({ extra_args = { "--fast" } }),
 		-- formatting.yapf,
 		formatting.stylua,
 		formatting.gofmt,
