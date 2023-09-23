@@ -64,25 +64,24 @@ return packer.startup(function(use)
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {},
 	})
-
 	-- Colorschemes
-	-- use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "catppuccin/nvim", name = "catppuccin", priority = 1000 })
 	--[[ use 'folke/tokyonight.nvim' ]]
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	--[[ use "lunarvim/darkplus.nvim" ]]
-	use({
-		"sainnhe/gruvbox-material",
-		enabled = true,
-		lazy = true,
-		priority = 1000,
-		config = function()
-			vim.o.background = "dark"
-			vim.g.float_style = "dim"
-			vim.g.gruvbox_material_background = "hard"
-			vim.g.gruvbox_material_transparent_background = 1
-			vim.cmd.colorscheme("gruvbox-material")
-		end,
-	})
+	-- use({
+	-- "sainnhe/gruvbox-material",
+	-- enabled = true,
+	-- lazy = true,
+	-- priority = 1000,
+	-- config = function()
+	-- vim.o.background = "dark"
+	-- vim.g.float_style = "dim"
+	-- vim.g.gruvbox_material_background = "hard"
+	-- vim.g.gruvbox_material_transparent_background = 1
+	-- vim.cmd.colorscheme("gruvbox-material")
+	-- end,
+	-- })
 	-- use({
 	-- "oxfist/night-owl.nvim",
 	-- lazy = false,
