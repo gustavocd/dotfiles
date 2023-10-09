@@ -51,6 +51,7 @@ brew "planetscale/tap/pscale"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "adoptopenjdk16"
 cask "font-fira-code-nerd-font"
+cask "font-jetbrains-mono"
 cask "ngrok"
 cask "rectangle"
 cask "vscodium"
