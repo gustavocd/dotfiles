@@ -15,7 +15,7 @@ vim.g.indent_blankline_filetype_exclude = {
 }
 vim.g.indentLine_enabled = 1
 -- vim.g.indent_blankline_char = "│"
-vim.g.indent_blankline_char = "▏"
+-- vim.g.indent_blankline_char = "▏"
 -- vim.g.indent_blankline_char = "▎"
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 vim.g.indent_blankline_show_first_indent_level = true
@@ -57,14 +57,16 @@ vim.opt.listchars:append("space:⋅")
 -- vim.opt.listchars:append "space:"
 -- vim.opt.listchars:append "eol:↴"
 
+local highlight = {
+	"CursorColumn",
+	"Whitespace",
+}
+
 indent_blankline.setup({
-	show_end_of_line = true,
-	space_char_blankline = " ",
-	show_current_context = true,
-	-- show_current_context_start = true,
-	-- char_highlight_list = {
-	--   "IndentBlanklineIndent1",
-	--   "IndentBlanklineIndent2",
-	--   "IndentBlanklineIndent3",
-	-- },
+	indent = { highlight = highlight, char = "", tab_char = "│" },
+	whitespace = {
+		highlight = highlight,
+		remove_blankline_trail = false,
+	},
+	scope = { enabled = false },
 })

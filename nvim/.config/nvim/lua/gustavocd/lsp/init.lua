@@ -11,6 +11,5 @@ lsp_zero.preset("recommended")
 lsp_zero.setup()
 
 require("gustavocd.lsp.settings")
+require("gustavocd.lsp.null_ls")
 require("gustavocd.lsp.handlers").setup()
-require("gustavocd.lsp.null-ls")
-require("gustavocd.lsp.go")

@@ -13,22 +13,37 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	debug = true,
 	sources = {
-		formatting.prettier.with({
-			only_local = "node_modules/.bin",
-			-- condition = function(utils)
-			-- return utils.has_file({ ".prettierrc.js", ".prettierrc.json" })
-			-- end,
-		}),
-		formatting.black.with({ extra_args = { "--fast" } }),
-		-- formatting.yapf,
 		formatting.stylua,
 		formatting.gofmt,
 		formatting.goimports,
-		diagnostics.eslint.with({
-			root_dir = nil,
-		}),
 		diagnostics.golangci_lint,
-		--[[ diagnostics.flake8, ]]
+		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.prettier.with({
+			only_local = "node_modules/.bin",
+			condition = function(utils)
+				return utils.has_file({
+					".prettierrc.js",
+					".prettierrc.json",
+					".prettierrc",
+					".prettierrc.yml",
+					".prettierrc.yaml",
+					"package.json",
+				})
+			end,
+		}),
+		diagnostics.eslint.with({
+			only_local = "node_modules/.bin",
+			condition = function(utils)
+				return utils.root_has_file({
+					".eslintrc.js",
+					".eslintrc.json",
+					".eslintrc",
+					".eslintrc.yml",
+					".eslintrc.yaml",
+					"package.json",
+				})
+			end,
+		}),
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

@@ -65,28 +65,43 @@ return packer.startup(function(use)
 		opts = {},
 	})
 	-- Colorschemes
-	use({ "catppuccin/nvim", name = "catppuccin", priority = 1000 })
-	--[[ use 'folke/tokyonight.nvim' ]]
+	-- use({ "catppuccin/nvim", name = "catppuccin", priority = 1000 })
+	--[[ use("folke/tokyonight.nvim") ]]
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	--[[ use "lunarvim/darkplus.nvim" ]]
-	-- use({
-	-- "sainnhe/gruvbox-material",
-	-- enabled = true,
-	-- lazy = true,
-	-- priority = 1000,
-	-- config = function()
-	-- vim.o.background = "dark"
-	-- vim.g.float_style = "dim"
-	-- vim.g.gruvbox_material_background = "hard"
-	-- vim.g.gruvbox_material_transparent_background = 1
-	-- vim.cmd.colorscheme("gruvbox-material")
-	-- end,
-	-- })
+	--[[ use({
+		"sainnhe/gruvbox-material",
+		enabled = true,
+		lazy = true,
+		priority = 1000,
+		config = function()
+			vim.o.background = "dark"
+			vim.g.gruvbox_material_background = "hard"
+			vim.g.gruvbox_material_enable_italic = 0
+			vim.g.gruvbox_material_ui_contrast = "high"
+			vim.g.gruvbox_material_float_style = "dim"
+			vim.g.gruvbox_material_transparent_background = 1
+			vim.g.gruvbox_material_better_performance = 1
+		end,
+	}) ]]
 	-- use({
 	-- "oxfist/night-owl.nvim",
 	-- lazy = false,
 	-- priority = 1000,
 	-- })
+	--
+	use({
+		"sainnhe/everforest",
+		config = function()
+			vim.o.background = "dark"
+			vim.g.everforest_background = "hard"
+			vim.g.everforest_enable_italic = 0
+			vim.g.everforest_ui_contrast = "high"
+			vim.g.everforest_float_style = "dim"
+			vim.g.everforest_transparent_background = 1
+			vim.g.everforest_better_performance = 1
+		end,
+	})
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -108,13 +123,19 @@ return packer.startup(function(use)
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
-			-- LSP Support
 			{
 				"williamboman/mason.nvim",
 				opts = {
 					ensure_installed = {
+						"eslint-lsp",
+						"goplsp",
+						"jsonls",
 						"pyright",
-						"black",
+						"dockerls",
+						"typescript-language-server",
+						"lua-language-server",
+						"tailwindcss-language-server",
+						"svelte-language-server",
 					},
 				},
 			},
@@ -138,9 +159,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
-
 	use("NvChad/nvim-colorizer.lua")
-
 	use("roobert/tailwindcss-colorizer-cmp.nvim")
 
 	-- copilot
