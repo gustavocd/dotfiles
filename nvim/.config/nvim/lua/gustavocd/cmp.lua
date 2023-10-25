@@ -122,12 +122,15 @@ cmp.setup({
 		select = false,
 	},
 	window = {
-		documentation = {
-			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-		},
+    completion = cmp.config.window.bordered({
+      winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+    }),
+    documentation = cmp.config.window.bordered({
+      winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+    }),
 	},
 	experimental = {
-		ghost_text = false,
+		ghost_text = true,
 		native_menu = false,
 	},
 })

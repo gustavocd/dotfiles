@@ -4,6 +4,7 @@ local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
+local keymap2 = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -66,14 +67,19 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap(
-	"n",
-	"<leader>f",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
-	opts
-)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap2("n", "<leader>f", function()
+	Telescope = require("telescope.builtin")
+	Telescope.find_files(require("telescope.themes").get_dropdown({ previewer = false }))
+end, opts)
+
+keymap2("n", "<c-t>", function()
+	Telescope = require("telescope.builtin")
+	Telescope.live_grep()
+end, opts)
+
+keymap2("n", "K", function()
+	vim.lsp.buf.hover()
+end)
 
 -- Nvimtree
 -- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

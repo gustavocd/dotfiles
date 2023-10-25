@@ -1,4 +1,6 @@
-return {
+local M = {}
+
+M.settings = {
 	gopls = {
 		analyses = {
 			unusedparams = true,
@@ -9,3 +11,6 @@ return {
 		usePlaceholders = true,
 	},
 }
+
+return M
+
