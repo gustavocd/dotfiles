@@ -81,5 +81,44 @@ keymap2("n", "K", function()
 	vim.lsp.buf.hover()
 end)
 
+keymap2("n", "gd", function()
+	vim.lsp.buf.definition()
+end, opts)
+
+keymap2("n", "<C-k>", function()
+	vim.lsp.buf.signature_help()
+end, opts)
+
+keymap2("n", "<leader>rn", function()
+	vim.lsp.buf.rename()
+end, opts)
+
+keymap2("n", "gi", function()
+	vim.lsp.buf.implementation()
+end, opts)
+
+keymap2("n", "gD", function()
+	vim.lsp.buf.declaration()
+end, opts)
+
+keymap2("n", "gr", function()
+	vim.lsp.buf.references()
+end, opts)
+
+keymap2("n", "gl", function()
+	vim.lsp.diagnostic.open_float()
+end, opts)
+
+keymap2("n", "[d", function()
+	vim.lsp.diagnostic.goto_prev({ border = "rounded" })
+end, opts)
+
+keymap2("n", "]d", function()
+	vim.lsp.diagnostic.goto_next({ border = "rounded" })
+end, opts)
+
+keymap2("n", "<leader>q", function()
+	vim.lsp.diagnostic.set_loclist()
+end, opts)
 -- Nvimtree
 -- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
