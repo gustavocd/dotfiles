@@ -14,6 +14,7 @@
   "copilot.lua": { "branch": "master", "commit": "688762a3999eeee54b78f447719854f52672ec02" },
   "friendly-snippets": { "branch": "main", "commit": "43727c2ff84240e55d4069ec3e6158d74cb534b6" },
   "gitsigns.nvim": { "branch": "main", "commit": "af0f583cd35286dd6f0e3ed52622728703237e50" },
+  "go.nvim": { "branch": "master", "commit": "47273b8ac93aa98a4f66247c91492febd0f8de30" },
   "impatient.nvim": { "branch": "main", "commit": "47302af74be7b79f002773011f0d8e85679a7618" },
   "indent-blankline.nvim": { "branch": "master", "commit": "29be0919b91fb59eca9e90690d76014233392bef" },
   "lazy.nvim": { "branch": "main", "commit": "16603c6917435d8446f7357cb61095138a417085" },
@@ -40,6 +41,5 @@
   "trouble.nvim": { "branch": "main", "commit": "f1168feada93c0154ede4d1fe9183bf69bac54ea" },
   "typescript-tools.nvim": { "branch": "master", "commit": "102ba313f87e1f9f9864f681dd7779cac8f6d3ea" },
   "vim-bbye": { "branch": "master", "commit": "25ef93ac5a87526111f43e5110675032dbcacf56" },
-  "vim-go": { "branch": "master", "commit": "1401b576c6ac382529188d3d26cff866139f2f9a" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }

@@ -126,7 +126,15 @@ return {
 	},
 
 	-- Go
-	-- use("ray-x/go.nvim")
+	{
+		"ray-x/go.nvim",
+		config = function()
+			require("go").setup()
+		end,
+		event = { "CmdlineEnter" },
+		ft = { "go", "gomod" },
+		build = ':lua require("go.install").update_all_sync()',
+	},
 	-- use("ray-x/guihua.lua")
-	{ "fatih/vim-go" },
+	--[[ { "fatih/vim-go" }, ]]
 }
