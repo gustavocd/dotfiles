@@ -9,8 +9,11 @@ M.settings = {
 		gofumpt = true,
 		completeUnimported = true,
 		usePlaceholders = true,
+		hints = {
+			parameterNames = true,
+		},
+		allExperiments = true,
 	},
 }
 
 return M
-

@@ -3,8 +3,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-local keymap2 = vim.keymap.set
+local keymap = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -26,6 +25,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+--[[ keymap("n", "<leader>e", ":Lex 30<CR>", opts) ]]
 keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
 -- Resize with arrows
@@ -67,57 +67,57 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
-keymap2("n", "<leader>f", function()
+keymap("n", "<leader>f", function()
 	Telescope = require("telescope.builtin")
 	Telescope.find_files(require("telescope.themes").get_dropdown({ previewer = false }))
 end, opts)
 
-keymap2("n", "<c-t>", function()
+keymap("n", "<c-t>", function()
 	Telescope = require("telescope.builtin")
 	Telescope.live_grep()
 end, opts)
 
-keymap2("n", "K", function()
+keymap("n", "K", function()
 	vim.lsp.buf.hover()
 end)
 
-keymap2("n", "gd", function()
+keymap("n", "gd", function()
 	vim.lsp.buf.definition()
 end, opts)
 
-keymap2("n", "<C-k>", function()
+keymap("n", "<C-k>", function()
 	vim.lsp.buf.signature_help()
 end, opts)
 
-keymap2("n", "<leader>rn", function()
+keymap("n", "<leader>rn", function()
 	vim.lsp.buf.rename()
 end, opts)
 
-keymap2("n", "gi", function()
+keymap("n", "gi", function()
 	vim.lsp.buf.implementation()
 end, opts)
 
-keymap2("n", "gD", function()
+keymap("n", "gD", function()
 	vim.lsp.buf.declaration()
 end, opts)
 
-keymap2("n", "gr", function()
+keymap("n", "gr", function()
 	vim.lsp.buf.references()
 end, opts)
 
-keymap2("n", "gl", function()
+keymap("n", "gl", function()
 	vim.lsp.diagnostic.open_float()
 end, opts)
 
-keymap2("n", "[d", function()
+keymap("n", "[d", function()
 	vim.lsp.diagnostic.goto_prev({ border = "rounded" })
 end, opts)
 
-keymap2("n", "]d", function()
+keymap("n", "]d", function()
 	vim.lsp.diagnostic.goto_next({ border = "rounded" })
 end, opts)
 
-keymap2("n", "<leader>q", function()
+keymap("n", "<leader>q", function()
 	vim.lsp.diagnostic.set_loclist()
 end, opts)
 -- Nvimtree
