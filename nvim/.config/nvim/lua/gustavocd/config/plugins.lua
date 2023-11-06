@@ -125,6 +125,8 @@ return {
 		end,
 	},
 
+	{ "wuelnerdotexe/vim-astro" },
+
 	-- Go
 	{
 		"ray-x/go.nvim",
